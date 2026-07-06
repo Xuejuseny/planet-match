@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宇宙方块三消</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell" aria-label="宇宙方块三消小游戏">
+    <section class="status-panel" aria-label="游戏状态">
+      <div>
+        <p class="eyebrow">星际任务</p>
+        <h1>宇宙方块三消</h1>
+      </div>
+
+      <div class="stats" aria-label="分数与步数">
+        <div class="stat">
+          <span>分数</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span>目标</span>
+          <strong id="target">5000</strong>
+        </div>
+        <div class="stat">
+          <span>步数</span>
+          <strong id="moves">25</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <p id="message" class="message" role="status" aria-live="polite">交换相邻方块，连接 3 个同色星核。</p>
+        <button id="restart" type="button">重新开始</button>
+      </div>
+    </section>
+
+    <section class="board-wrap" aria-label="游戏棋盘">
+      <div id="board" class="board" role="grid" aria-label="8 乘 8 宇宙方块棋盘"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
